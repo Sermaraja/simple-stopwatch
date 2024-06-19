@@ -1,0 +1,110 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.outer-circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: border-color-change 2s infinite;
+}
+
+.inner-circle {
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3498db;
+}
+
+.stopwatch {
+    font-size: 24px;
+}
+
+.top-right-image {
+    position: absolute;
+    top: 10px;
+    left: 10px; 
+    margin-top: 200px;
+    width: 300px; 
+    height: 300px; 
+}
+
+.animate {
+    animation: landing 1s ease-out;
+}
+
+@keyframes landing {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#start {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button#stop {
+    background-color: #f44336;
+    color: white;
+}
+
+button#pause {
+    background-color: #ff9800;
+    color: white;
+}
+
+button#lap {
+    background-color: #00bcd4;
+    color: white;
+}
+
+.laps {
+    margin-top: 20px;
+    width: 200px;
+    max-height: 100px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+@keyframes border-color-change {
+    0% { border: 5px solid #3498db; }
+    25% { border: 5px solid #e74c3c; }
+    50% { border: 5px solid #f1c40f; }
+    75% { border: 5px solid #2ecc71; }
+    100% { border: 5px solid #3498db; }
+}
